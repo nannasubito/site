@@ -27,9 +27,13 @@ p{margin-top:12px}
 .faixa{display:flex;align-items:center;justify-content:center;gap:8px;padding:10px;background:var(--forte);color:#fff;font-weight:800;font-size:14.5px;text-align:center;white-space:nowrap}
 .faixa svg{width:16px;height:16px;flex:none;color:var(--lua)}
 @media (max-width:370px){.faixa{font-size:13px}}
-/* hero: marca, headline e a VSL (toca muda até a pessoa tocar para ouvir) */
+/* hero: headline e a VSL (toca muda até a pessoa tocar para ouvir); a marca vai junto do preço, abaixo do vídeo */
 .hero{background:linear-gradient(180deg,var(--azul) 0%,var(--azul2) 100%);padding:16px 0 30px}
-.marca{display:flex;align-items:center;gap:9px;font-weight:800;margin-bottom:12px}
+.marca{display:flex;align-items:center;gap:9px;font-weight:800}
+.produto{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px;padding:10px 14px;background:#fff;border-radius:16px;box-shadow:0 6px 18px -10px rgba(27,47,74,.35)}
+.produto .preco{flex-direction:column;align-items:flex-end;gap:0;margin:0;line-height:1.1}
+.produto .preco b{font-size:28px}
+.produto .preco span{font-size:13px}
 .marca img{width:34px;height:34px;border-radius:9px;box-shadow:0 2px 8px rgba(27,47,74,.2)}
 .mini-fone{position:absolute;right:14px;bottom:-6px;width:96px;z-index:2;filter:drop-shadow(0 10px 18px rgba(27,47,74,.35))}
 .vsl{position:relative;max-width:420px;aspect-ratio:4/5;margin:16px auto 0;border-radius:20px;overflow:hidden;background:var(--azul3) url(img/vsl-capa.webp) center/cover;box-shadow:0 18px 40px -16px rgba(27,47,74,.55)}
@@ -38,7 +42,6 @@ p{margin-top:12px}
 .som svg{width:40px;height:40px}
 .vsl.ouvindo .som{display:none}
 @keyframes pulsa{50%{transform:translate(-50%,-50%) scale(1.06)}}
-.chapeu{display:inline-block;font-size:13.5px;line-height:1.35;font-weight:700;border-radius:999px;padding:5px 12px;margin:2px 0 10px;background:#fff;color:var(--forte2)}
 .hero .sub{color:var(--suave);font-size:16px;margin-top:10px}
 .preco{display:flex;align-items:baseline;justify-content:center;gap:10px;margin-top:14px}
 .preco b{font-size:34px;color:var(--tinta)}
@@ -132,14 +135,12 @@ footer a{margin:0 8px}
 
 <section class="hero">
  <div class="c">
-  <div class="marca"><img src="img/icone-120.png" alt="" width="34" height="34">Nanna Subito</div>
-  <span class="chapeu">Per bimbi da 0 a 2 anni</span>
   <h1>Stanotte si addormenta senza ore in braccio. E senza pianti.</h1>
   <div class="vsl">
    <video data-lab-vsl="vsl-v1-ugc-93s" src="video/vsl-v1.mp4" poster="img/vsl-capa.webp" preload="none" muted playsinline width="720" height="900"></video>
    <button class="som" type="button"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M4 9h4l5-4v14l-5-4H4z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>Tocca per ascoltare</button>
   </div>
-  <div class="preco"><b>14,90 €</b><span>pagamento unico</span></div>
+  <div class="produto"><span class="marca"><img src="img/icone-120.png" alt="" width="34" height="34">Nanna Subito</span><span class="preco"><b>14,90 €</b><span>pagamento unico</span></span></div>
   <a class="btn" href="__CHECKOUT__">Voglio farlo addormentare stanotte</a>
   <p class="micro">Niente da scaricare · link via email</p>
  </div>
