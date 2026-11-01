@@ -8,7 +8,7 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 SITE = os.path.dirname(AQUI)
 APP = 'https://nannasubito.github.io/app/'
 DOMINIO = 'https://nannasubito.com/'
-CK_CONSULENTE = '#'  # checkout do Consulente na Hotmart, com ?checkoutMode=10 (reserva do widget); ainda não criado
+CK_CONSULENTE = 'https://pay.hotmart.com/F108290595O?checkoutMode=10'  # checkout do Consulente na Hotmart (reserva do widget de 1 clique)
 
 # pasta da página de acesso -> (pasta do app, nome, título, texto)
 ACESSOS = {

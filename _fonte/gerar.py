@@ -6,7 +6,7 @@ import os
 AQUI = os.path.dirname(os.path.abspath(__file__))
 SITE = os.path.dirname(AQUI)
 
-CHECKOUT = '#offerta'  # front na Hotmart em euro, com ?checkoutMode=10 (sem ele somem banner e bumps); ainda não criado
+CHECKOUT = 'https://pay.hotmart.com/Q108290387T?checkoutMode=10'  # front na Hotmart em euro: sem checkoutMode=10 o banner e os bumps somem
 PIXEL_ID = ''  # dataset do Meta da oferta; ainda não criado
 PAINEL = ''  # script de visitas do painel (instalacao.script do diagnostico-rastreio)
 
