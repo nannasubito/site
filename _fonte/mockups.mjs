@@ -23,6 +23,7 @@ const TELAS = {
   piano: ['[data-a="ir"][data-t="piano"]'],
   stanza: ['[data-a="ir"][data-t="stanza"]'],
   notte: ['[data-a="notte"]'],
+  consulente: ['[data-a="pacchetto"][data-p="consulente"]'],
 };
 
 const navegador = await chromium.launch({ headless: true, args: ['--mute-audio'] });
