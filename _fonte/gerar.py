@@ -7,8 +7,8 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 SITE = os.path.dirname(AQUI)
 
 CHECKOUT = 'https://pay.hotmart.com/Q108290387T?checkoutMode=10'  # front na Hotmart em euro: sem checkoutMode=10 o banner e os bumps somem
-PIXEL_ID = ''  # dataset do Meta da oferta; ainda não criado
-PAINEL = ''  # script de visitas do painel (instalacao.script do diagnostico-rastreio)
+PIXEL_ID = '3800585076746175'  # dataset do Meta "Nanna Subito" na canarimtech
+PAINEL = '<script async src="https://painel.labofertas.com/api/lp/script?k=c96a2021ec0dd772746002f6ed6b4cb5"></script>'  # visitas do painel (instalacao.script do diagnostico-rastreio)
 
 pixel = ''
 if PIXEL_ID:
