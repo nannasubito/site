@@ -13,7 +13,7 @@ CK_CONSULENTE = 'https://pay.hotmart.com/F108290595O?checkoutMode=10'  # checkou
 # pasta da página de acesso -> (pasta do app, nome, título, texto)
 ACESSOS = {
     'accesso-7t53it': ('p3n8wa', 'Nanna Subito', 'Fatto. Nanna Subito è tua.', "Aprila da qui, dal telefono, e stasera parti dal rituale."),
-    'accesso-e09m9e': ('h6s2qe', 'Nanna senza seno', 'Fatto. Nanna senza seno è tuo.', 'Si sblocca dentro Nanna Subito: aprilo dallo stesso telefono.'),
+    'accesso-e09m9e': ('h6s2qe', 'Nanna senza seno', 'Fatto. Nanna senza seno è tua.', 'Si sblocca dentro Nanna Subito: aprilo dallo stesso telefono.'),
     'accesso-m16gzm': ('r9l4tm', 'Nel lettino', 'Fatto. Nel lettino è tuo.', 'Si sblocca dentro Nanna Subito: aprilo dallo stesso telefono.'),
     'accesso-dsdduo': ('z5o7ck', 'Orologio della Nanna', "Fatto. L'Orologio della Nanna è tuo.", 'Si sblocca dentro Nanna Subito: aprilo dallo stesso telefono.'),
     'accesso-n2icfq': ('k8c3vd', 'Diario della Nanna', 'Fatto. Il Diario della Nanna è tuo.', 'Si sblocca dentro Nanna Subito, insieme a tutta l\'app: aprilo dallo stesso telefono.'),
