@@ -8,15 +8,15 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 SITE = os.path.dirname(AQUI)
 APP = 'https://nannasubito.github.io/app/'
 DOMINIO = 'https://nannasubito.com/'
-CK_CONSULENTE = 'https://pay.hotmart.com/F108290595O?checkoutMode=10'  # checkout do Consulente na Hotmart (reserva do widget de 1 clique)
+CK_CONSULENTE = 'https://pay.hotmart.com/F108290595O?checkoutMode=10'  # checkout do Diario della Nanna (ex Consulente del Sonno) na Hotmart (reserva do widget de 1 clique)
 
 # pasta da página de acesso -> (pasta do app, nome, título, texto)
 ACESSOS = {
     'accesso-7t53it': ('p3n8wa', 'Nanna Subito', 'Fatto. Nanna Subito è tua.', "Aprila da qui, dal telefono, e stasera parti dal rituale."),
-    'accesso-e09m9e': ('h6s2qe', 'Senza seno', 'Fatto. Senza seno è tuo.', 'Si sblocca dentro Nanna Subito: aprilo dallo stesso telefono.'),
+    'accesso-e09m9e': ('h6s2qe', 'Nanna senza seno', 'Fatto. Nanna senza seno è tuo.', 'Si sblocca dentro Nanna Subito: aprilo dallo stesso telefono.'),
     'accesso-m16gzm': ('r9l4tm', 'Nel lettino', 'Fatto. Nel lettino è tuo.', 'Si sblocca dentro Nanna Subito: aprilo dallo stesso telefono.'),
     'accesso-dsdduo': ('z5o7ck', 'Orologio della Nanna', "Fatto. L'Orologio della Nanna è tuo.", 'Si sblocca dentro Nanna Subito: aprilo dallo stesso telefono.'),
-    'accesso-n2icfq': ('k8c3vd', 'Consulente del Sonno', 'Fatto. Il Consulente del Sonno è tuo.', 'Si sblocca dentro Nanna Subito, insieme a tutta l\'app: aprilo dallo stesso telefono.'),
+    'accesso-n2icfq': ('k8c3vd', 'Diario della Nanna', 'Fatto. Il Diario della Nanna è tuo.', 'Si sblocca dentro Nanna Subito, insieme a tutta l\'app: aprilo dallo stesso telefono.'),
 }
 FRONT = 'accesso-7t53it'
 
@@ -32,7 +32,7 @@ ESTILO = (':root{--fundo:#eef6fc;--cartao:#fff;--tinta:#1b2f4a;--suave:#4a6079;-
 
 
 def acesso(pasta, nome, titulo, texto, front):
-    pac = ('<p class="pacchetti"><b>Hai aggiunto Senza seno, Nel lettino o l\'Orologio della Nanna?</b> Ogni pacchetto arriva con la sua '
+    pac = ('<p class="pacchetti"><b>Hai aggiunto Nanna senza seno, Nel lettino o l\'Orologio della Nanna?</b> Ogni pacchetto arriva con la sua '
            'email di Hotmart e il suo PDF: apri quel link dallo stesso telefono e il pacchetto si sblocca dentro l\'app.</p>') if front else ''
     return f'''<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow"><link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
 <!-- obrigado da Hotmart: ela não manda o link do app, então o acesso abre daqui, na hora -->
@@ -58,7 +58,7 @@ UPSELL = f'''<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Consulente del Sonno · Nanna Subito</title>
+<title>Diario della Nanna · Nanna Subito</title>
 <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
 <style>
 {ESTILO}
@@ -69,31 +69,28 @@ UPSELL = f'''<!doctype html>
 .offerta{{background:var(--cartao);border:2px solid var(--forte);border-radius:22px;padding:20px 18px;margin-top:22px}}
 .prezzo{{font-size:15.5px;color:var(--suave);margin-top:12px}}.prezzo b{{display:block;font-size:30px;color:var(--tinta)}}
 #hotmart-sales-funnel{{margin-top:16px;min-height:10px}}.reserva[hidden]{{display:none}}
-.reserva a{{display:flex;align-items:center;justify-content:center;width:100%;text-decoration:none;border-radius:16px;text-align:center}}
-.reserva .si{{margin-top:16px;min-height:58px;background:var(--forte);color:#fff;font-weight:800;font-size:18px}}
+.reserva a{{display:flex;align-items:center;justify-content:center;width:100%;text-decoration:none;border-radius:16px;text-align:center;padding:10px 16px}}
+.reserva .si{{margin-top:16px;min-height:58px;background:var(--forte);color:#fff;font-weight:800;font-size:17px}}
 .reserva .no{{margin-top:10px;min-height:50px;border:1.5px solid var(--linha);background:var(--cartao);color:var(--tinta);font-weight:600;font-size:16px}}
 .nota{{text-align:center;font-size:14px}}
+.apoio{{font-size:15.5px;font-weight:700;color:var(--forte)}}.micro{{font-size:14px;color:var(--suave);margin-top:6px}}
 </style>
 </head>
 <body>
-<div class="ok"><b>Pagamento confermato.</b>L'app si apre subito dopo questa pagina.</div>
+<div class="ok"><b>Fatto, il tuo acquisto è confermato.</b>Un attimo ancora e apri Nanna Subito.</div>
 <main>
   <h1>Ancora una cosa, prima di stasera</h1>
-  <p class="suave">Le prime notti vanno meglio. Poi arrivano i dentini, un salto di crescita, la regressione dei 4 mesi, un viaggio, un raffreddore, e si ricomincia da capo.</p>
-  <div class="fone"><img src="../img/app-consulente.webp" alt="Il Consulente del Sonno nell'app" width="560" height="1078"></div>
+  <p class="suave">Nei prossimi mesi arrivano i dentini, un salto di crescita, la regressione dei 4 mesi, un raffreddore, e non sai più se cambiare qualcosa o aspettare. Il Diario della Nanna serve a questo: ogni mattina segni com'è andata la notte con due tocchi, e ti dice cosa cambiare stasera. Dentro c'è anche l'SOS per regressioni (4 mesi, 8-10 mesi, 18 mesi), dentini, salti, viaggi, malattie e cambio dell'ora, fino ai 3 anni.</p>
+  <p class="apoio">Ogni mattina, cosa cambiare stasera · SOS fino ai 3 anni</p>
+  <div class="fone"><img src="../img/app-consulente.webp" alt="Il Diario della Nanna nell'app" width="560" height="1078"></div>
   <div class="offerta">
-    <h2 style="font-size:22px">Consulente del Sonno</h2>
-    <ul class="lista">
-      <li>Ogni mattina segni com'è andata la notte con due tocchi</li>
-      <li>L'app ti dice cosa cambiare stasera</li>
-      <li>SOS per regressioni (4 mesi, 8-10 mesi, 18 mesi), dentini, salti, viaggi e malattie</li>
-      <li>Per togliere le poppate di notte, fino ai 3 anni</li>
-    </ul>
-    <p class="prezzo"><b>19,90 €</b>Una volta sola. Si aggiunge con un tocco, con lo stesso metodo di pagamento.</p>
+    <h2 style="font-size:22px">Diario della Nanna</h2>
+    <p class="prezzo"><b>19,90 €</b>Una volta sola. Nessun abbonamento.</p>
+    <p class="micro">Rimborso entro 15 giorni.</p>
     <div id="hotmart-sales-funnel"></div>
     <div class="reserva" id="reserva" hidden>
-      <a class="si" href="{CK_CONSULENTE}">Sì, aggiungi il Consulente del Sonno</a>
-      <a class="no" href="{DOMINIO}{FRONT}/">No grazie, mi basta l'app</a>
+      <a class="si" href="{CK_CONSULENTE}">Sì, aggiungi il Diario della Nanna</a>
+      <a class="no" href="{DOMINIO}{FRONT}/">No grazie, apro Nanna Subito</a>
     </div>
   </div>
 </main>
@@ -120,4 +117,4 @@ for pasta, (app, nome, titulo, texto) in ACESSOS.items():
     open(os.path.join(SITE, pasta, 'index.html'), 'w', encoding='utf-8', newline='\n').write(acesso(app, nome, titulo, texto, pasta == FRONT))
 os.makedirs(os.path.join(SITE, 'offerta-consulente'), exist_ok=True)
 open(os.path.join(SITE, 'offerta-consulente', 'index.html'), 'w', encoding='utf-8', newline='\n').write(UPSELL)
-print('ok:', len(ACESSOS), 'acessos + offerta-consulente | checkout do Consulente:', CK_CONSULENTE)
+print('ok:', len(ACESSOS), 'acessos + offerta-consulente | checkout do Diario della Nanna:', CK_CONSULENTE)
