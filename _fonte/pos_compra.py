@@ -13,7 +13,7 @@ CK_CONSULENTE = 'https://pay.hotmart.com/F108290595O?checkoutMode=10'  # checkou
 # pasta da página de acesso -> (pasta do app, nome, título, texto)
 ACESSOS = {
     'accesso-7t53it': ('p3n8wa', 'Nanna Subito', 'Fatto. Nanna Subito è tua.', "Aprila da qui, dal telefono, e stasera parti dal rituale."),
-    'accesso-e09m9e': ('h6s2qe', 'Nanna senza seno', 'Fatto. Nanna senza seno è tua.', 'Si sblocca dentro Nanna Subito: aprilo dallo stesso telefono.'),
+    'accesso-e09m9e': ('h6s2qe', 'Nanna senza seno', 'Fatto. Nanna senza seno è tua.', 'Si sblocca dentro Nanna Subito: aprila dallo stesso telefono.'),
     'accesso-m16gzm': ('r9l4tm', 'Nel lettino', 'Fatto. Nel lettino è tuo.', 'Si sblocca dentro Nanna Subito: aprilo dallo stesso telefono.'),
     'accesso-dsdduo': ('z5o7ck', 'Orologio della Nanna', "Fatto. L'Orologio della Nanna è tuo.", 'Si sblocca dentro Nanna Subito: aprilo dallo stesso telefono.'),
     'accesso-n2icfq': ('k8c3vd', 'Diario della Nanna', 'Fatto. Il Diario della Nanna è tuo.', 'Si sblocca dentro Nanna Subito, insieme a tutta l\'app: aprilo dallo stesso telefono.'),
@@ -80,7 +80,7 @@ UPSELL = f'''<!doctype html>
 <div class="ok"><b>Fatto, il tuo acquisto è confermato.</b>Un attimo ancora e apri Nanna Subito.</div>
 <main>
   <h1>Ancora una cosa, prima di stasera</h1>
-  <p class="suave">Nei prossimi mesi arrivano i dentini, un salto di crescita, la regressione dei 4 mesi, un raffreddore, e non sai più se cambiare qualcosa o aspettare. Il Diario della Nanna serve a questo: ogni mattina segni com'è andata la notte con due tocchi, e ti dice cosa cambiare stasera. Dentro c'è anche l'SOS per regressioni (4 mesi, 8-10 mesi, 18 mesi), dentini, salti, viaggi, malattie e cambio dell'ora, fino ai 3 anni.</p>
+  <p class="suave">Nei prossimi mesi arrivano i dentini, un salto di crescita, la regressione dei 4 mesi, un raffreddore, e non sai più se cambiare qualcosa o aspettare. Il Diario della Nanna serve a questo: ogni mattina segni com'è andata la notte con due tocchi, e ti dice cosa cambiare stasera. Dentro c'è anche l'SOS per regressioni (4 mesi, 8-10 mesi, 18 mesi), dentini, salti di crescita, viaggi, malattie e cambio dell'ora, fino ai 3 anni.</p>
   <p class="apoio">Ogni mattina, cosa cambiare stasera · SOS fino ai 3 anni</p>
   <div class="fone"><img src="../img/app-consulente.webp" alt="Il Diario della Nanna nell'app" width="560" height="1078"></div>
   <div class="offerta">
@@ -90,7 +90,7 @@ UPSELL = f'''<!doctype html>
     <div id="hotmart-sales-funnel"></div>
     <div class="reserva" id="reserva" hidden>
       <a class="si" href="{CK_CONSULENTE}">Sì, aggiungi il Diario della Nanna</a>
-      <a class="no" href="{DOMINIO}{FRONT}/">No grazie, apro Nanna Subito</a>
+      <a class="no" href="{DOMINIO}{FRONT}/">No, grazie, apro Nanna Subito</a>
     </div>
   </div>
 </main>
